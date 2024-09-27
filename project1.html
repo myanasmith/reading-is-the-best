@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading is the best 📖</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #8f8787;
+        font-size: 40px;
+        font-weight: 700;
+      }
+
+      h2 {
+        text-align: center;
+        color: #2b2b2b;
+        border: 1px solid #ebcbae;
+        border-radius: 15px;
+        font-size: 20px;
+        padding: 15px;
+        font-weight: 300;
+        font-style: italic;
+        background: linear-gradient(
+          44.8deg,
+          rgba(255, 136, 102, 0.67) -53.1%,
+          rgba(255, 221, 136, 0.28) 49%
+        );
+      }
+
+      img {
+        display: block;
+        border-radius: 15px;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 18px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        margin: 30px 0px 15px;
+      }
+
+      button {
+        display: block;
+        background: #ebcbae;
+        color: white;
+        font-family: cursive;
+        font-size: 25px;
+        border-radius: 15px;
+        padding: 15px 40px;
+        text-align: center;
+        border: none;
+        box-shadow: 7px 7px 8px rgba(0, 0, 0, 0.2);
+        transition: all 200ms ease-in-out;
+        margin: 30px auto;
+      }
+
+      button:hover {
+        background-color: #877b23;
+        cursor: pointer;
+      }
+
+      .adore {
+        color: #8f5e25ac;
+      }
+
+      .container {
+        margin: 0 auto;
+        padding: 12px 80px;
+        max-width: 700px;
+        background-color: #fff3ee;
+        border-radius: 50px;
+      }
+
+      .learn-more {
+        font-size: 16px;
+        color: #8f5e25;
+        text-decoration: none;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+        color: #78806f;
+      }
+
+      .footer {
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+        font-weight: 200;
+      }
+      .my-name {
+        font-weight: 600;
+        color: #a5743d;
+      }
+
+      .highlight {
+        color: rgb(245, 156, 156);
+        font-weight: bold;
+        padding: 0.2em;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I <em class="adore">Adore</em> Reading</h1>
+      <hr />
+      <h2>
+        Reading is
+        <span class="highlight">Food</span>
+        for the Brain
+      </h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/143/616/original/alisa-anton-UqDhpC_rc_I-unsplash.jpg?1726439556"
+        alt="Books"
+      />
+
+      <p>
+        Reading is like giving your brain a cozy little snack—it feeds your mind
+        with new ideas and keeps it sharp! Just like how our bodies need food to
+        grow strong, our brains need books to stay happy and healthy. So, cuddle
+        up with a good book and give your brain the nourishment it deserves!
+        <br />
+        <br />
+        <a
+          href="https://www.ultrawellnesscenter.com/2017/12/05/reading-brain-food/"
+          target="_blank"
+          class="learn-more"
+        >
+          <strong>Learn more about reading</strong>
+        </a>
+        <button class="buy-button">📚 Buy Books</button>
+      </p>
+
+      <p class="footer">
+        This page was built by <em class="my-name">Myana Smith</em>
+      </p>
+    </div>
+    <script>
+      function buy() {
+        let name = prompt("What is your name?");
+
+        const answer = prompt("Do you like books? (yes/no)");
+
+        if (answer.toLowerCase() === "yes") {
+          alert("Great job feeding your brain!");
+        } else if (answer.toLowerCase() === "no") {
+          alert("Your brain is straving!!");
+        } else {
+          alert("Please answer with 'yes' or 'no'");
+        }
+        let email = prompt("What is your email?");
+        alert(
+          "Thank you, " +
+            name +
+            "! We'll reach out to you soon, while you wait go get lost in a literary world. 📖"
+        );
+      }
+
+      let buyButton = document.querySelector(".buy-button");
+      buyButton.addEventListener("click", buy);
+    </script>
+  </body>
+</html>
